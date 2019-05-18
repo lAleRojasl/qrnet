@@ -12,7 +12,7 @@ Required tools:
   - Dumbnet:  
     	$ sudo apt install libdnet python-dumbnet  
   - Mesh Networking  
-    	$ sudo pip3 install mesh-networking 
-Install:
-	$cd qrnet
-	$sudo python3 setup.py install
+    	$ sudo pip3 install mesh-networking  
+Install:  
+	$cd qrnet  
+	$sudo python3 setup.py install  
