@@ -10,6 +10,9 @@ Required tools:
 	$ sudo pip3 install python-scapy3  
 	$ sudo pip3 install ipython3  
   - Dumbnet:  
-    	$ sudo apt install libdnet python-dumbnet  # or `brew install --with-python libdnet`  
+    	$ sudo apt install libdnet python-dumbnet  
   - Mesh Networking  
-    	$ sudo pip3 install mesh-networking  
+    	$ sudo pip3 install mesh-networking 
+Install:
+	$cd qrnet
+	$sudo python3 setup.py install
