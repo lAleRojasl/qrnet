@@ -1,4 +1,0 @@
-bottle
-scapy
-dnet
-mesh-networking
