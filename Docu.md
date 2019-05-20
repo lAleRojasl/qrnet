@@ -32,7 +32,7 @@
 
 ## Introducción
 
-La libertad de expresión y el anonimato en la telecomunicación, son dos de los principales obstaculos que enfrentamos actualmente, paises como Korea del Norte, donde el gobierno no permite acceso general a internet debido a sus políticas aislacionista, usando en cambio una red interna nacional llamada Kwangmyong [1]; o en Estados Unidos, donde organizaciones como la NSA monitorean constantemente las comunicaciones de los habitantes, con la excusa de protejerlos de amenazas externas [2] . El objetivo del proyecto es conocer distintas soluciones que nos permitan acercarnos más a esa libertad de expresión sin excepciones.
+La libertad de expresión y el anonimato en la telecomunicación, son dos de los principales obstaculos que enfrentamos actualmente, paises como Korea del Norte, donde el gobierno no permite acceso general a internet debido a sus políticas aislacionista, usando en cambio una red interna nacional llamada Kwangmyong [1]; o en Estados Unidos, donde organizaciones como la NSA monitorean constantemente las comunicaciones de los habitantes, con la excusa de protejerlos de amenazas externas [2] . El objetivo del proyecto es conocer distintas soluciones que nos permitan acercarnos más a esa libertad de expresión sin excepciones, de forma anónima y segura.
 
 ## Ambiente de Desarrollo
 
