@@ -12,7 +12,7 @@ import struct
 class DispositivoLector():
     def __init__(self):
         # get the webcam:  
-        self.cap = cv2.Videoself.capture(0)
+        self.cap = cv2.VideoCapture(0)
 
         self.cap.set(3,640)
         self.cap.set(4,480)
@@ -27,7 +27,7 @@ class DispositivoLector():
             # Our operations on the frame come here
             im = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
                  
-            decodedObjects = decode(im)
+            decodedObjects = self.decode(im)
 
             for decodedObject in decodedObjects: 
                 points = decodedObject.polygon
@@ -53,9 +53,10 @@ class DispositivoLector():
                         print(datos)
                     #print(datos)
                     if(self.flag == 0):
-                        self.flag = set_size(datos[0])
+                        self.flag = self.set_size(datos[0])
+                        self.flag = self.set_size(datos[0])
                     if datos[1] not in self.lista:
-                        add_to_list(datos)
+                        self.add_to_list(datos)
                     elif "" not in self.lista:
                         #build_file()
                         print(str(lista))
@@ -72,27 +73,28 @@ class DispositivoLector():
         # When everything done, release the self.capture
         self.cap.release()
         cv2.destroyAllWindows()
-    def set_size(data):
+
+    def set_size(self,data):
         data = data.decode("utf-8")
         nums = data.split("/")
-        return fill_list(int(nums[1]))
+        return self.fill_list(int(nums[1]))
 
-    def fill_list(largo):
+    def fill_list(self,largo):
         for i in range(largo):
             self.lista.append("")
         return -1
 
-    def add_to_list(data):
-        num = getnumber(data[0])
+    def add_to_list(self,data):
+        num = self.getnumber(data[0])
         print("Pos: " + str(num))
         self.lista[num-1] = data[1]
 
-    def getnumber(data):
+    def getnumber(self,data):
         data = data.decode("utf-8")
         nums = data.split("/")
         return int(nums[0])
 
-    def build_file():
+    def build_file(self):
         name = self.lista.pop(0).decode("utf-8")
         print(name)
         file = open(name, "wb")
@@ -101,7 +103,7 @@ class DispositivoLector():
         file.close()
         print("File Ready")
 
-    def decode(im): 
+    def decode(self,im): 
         # Find barcodes and QR codes
         decodedObjects = pyzbar.decode(im)
         return decodedObjects
