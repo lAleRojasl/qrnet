@@ -1,6 +1,6 @@
 import time
 
-from qr import QRGenerator
+from qr import DispositivoLuzAdaptador
 from mesh.node import Node
 from mesh.links import UDPLink, VirtualLink, IRCLink
 from mesh.programs import Printer, Switch
@@ -63,7 +63,7 @@ class NodeProgram(BaseProgram):
         s = packet.decode()
         if(str(interface) == '<vl4>'):
             #create QR
-            QRGenerator(s)
+            DispositivoLuzAdaptador(s)
         else:
             print('\n[USER] Received message>> {}'.format(s))
 
